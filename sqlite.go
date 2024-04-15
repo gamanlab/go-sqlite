@@ -123,6 +123,14 @@ var (
 )
 
 func init() {
+	drivers := sql.Drivers()
+	for _, d := range drivers {
+		if d == driverName {
+			log.Println("WARNING: driver", driverName, "is already registered. If you not sure what you are doing, you may have a problem.")
+			return
+		}
+	}
+
 	sql.Register(driverName, newDriver())
 }
 
