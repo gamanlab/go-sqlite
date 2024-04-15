@@ -51,7 +51,7 @@ var (
 var LogSqlStatements bool
 
 const (
-	driverName              = "sqlite"
+	driverName              = "glebarez_sqlite"
 	ptrSize                 = unsafe.Sizeof(uintptr(0))
 	sqliteLockedSharedcache = sqlite3.SQLITE_LOCKED | (1 << 8)
 )
@@ -121,6 +121,10 @@ var (
 		sqlite3.SQLITE_WARNING:           "Warnings from sqlite3_log() (SQLITE_WARNING)",
 	}
 )
+
+func init() {
+	sql.Register(driverName, newDriver())
+}
 
 type result struct {
 	lastInsertID int64
