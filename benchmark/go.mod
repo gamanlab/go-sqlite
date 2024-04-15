@@ -1,9 +1,9 @@
-module github.com/glebarez/go-sqlite/benchmark
+module github.com/gamanlab/go-sqlite/benchmark
 
 go 1.17
 
 require (
-	github.com/glebarez/go-sqlite v1.14.5
+	github.com/gamanlab/go-sqlite v1.14.5
 	github.com/klauspost/cpuid/v2 v2.0.9
 	github.com/mattn/go-sqlite3 v1.14.9
 )

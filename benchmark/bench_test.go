@@ -13,7 +13,7 @@ import (
 	"runtime"
 	"testing"
 
-	_ "github.com/glebarez/go-sqlite"
+	_ "github.com/gamanlab/go-sqlite"
 	"github.com/klauspost/cpuid/v2"
 	_ "github.com/mattn/go-sqlite3"
 )

@@ -16,7 +16,7 @@ import (
 	"testing"
 	"time"
 
-	sqlite3 "github.com/glebarez/go-sqlite"
+	sqlite3 "github.com/gamanlab/go-sqlite"
 )
 
 func init() {
